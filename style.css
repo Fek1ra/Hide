@@ -1,0 +1,501 @@
+body {
+	margin: 0;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	background-color: #1B1617;
+/*	height: 700vh; *//*Длина сайта в 7 экранов*/
+	display: block;
+	scroll-behavior: smooth;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} /*Закрепленная шапка*/
+
+.sticky .content {
+  padding-top: 102px;
+} /*Отдаление от закрепленной шапки*/
+
+.navbar {
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 20px 10px rgba(0, 0, 0, .1); /*Добавляет тень под элемент*/
+	border-bottom: 1px solid #00FFA7; /*Полоса под шапкой*/
+	border-bottom-width: 5px; /*Ширина полосы*/
+	border-bottom-color: #00FFA7; /*Цвет полосы*/
+	z-index: 999;
+}
+
+.navbar .container {
+	height: inherit; /* Уравнение высоты по высоте родителя (В данном случае 'HIDE')*/
+	display: flex; 
+	justify-content: flex-start; /*Отвечает за расположение єлементов с пробелами друг от друга*/
+	align-items: center; /*Распологает элементы по центру в блоке 'navbar' */
+	background-color: rgb(29, 31, 32);
+}
+
+.navbar-menu {
+	list-style-type: none;
+	padding-left: 0;
+	display: flex;
+}
+
+.navbar-menu li {
+	display: inline-block;
+}
+
+.navbar-menu li a {
+	font-size: 20px;
+	display: inline-block; /*Отображение элементов в линию*/
+	color: white;
+	opacity: 0.9; /*Прозрачность текста*/
+	text-decoration: none; /*Убирает подчеркивания*/
+	padding: 10px; /*Отдаление вокруг элемента*/
+	transition: all 0.2s ease-in-out; /*Длительность анимаций*/
+}
+
+.navbar-menu li a:hover {
+	color: #00FFA7;
+	opacity: 1;
+} /*Измена цвета при наведении на тект*/
+
+.navbar-wrap {
+	display: flex; 
+	flex-flow: row nowrap; /*Располагает элементы в ряд без смещений (Справочник)*/
+}
+
+.buy-hide {
+	margin-right: 40px;
+	margin-left: 2%;
+	padding: 10px 60px;
+} /*Отступы кнопки покупки*/
+
+.log-hide {
+	margin-right: 40px;
+	margin-left: 2%;
+	padding: 10px 60px;
+} /*Отступы кнопки авторизации*/
+
+.reg-hide {
+	margin-left: auto;
+	padding: 10px 60px;
+} /*Отступы кнопки регистрации*/
+
+.nav-btn {
+	text-decoration: none;
+	padding: 10px 60px;
+	color: #524f4e;
+	text-align: center;
+	border-radius: 10px;
+	font-weight: 600;
+	background: white;
+	box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+	transition: .3s;
+}/*Параметры кнопки*/
+
+.nav-btn:hover {
+	background: #2EE59D;
+	box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+	color: white;
+	transform: translateY(-7px);
+} /*Эффекты кнопки при наведении*/
+
+
+select {
+	text-decoration: none;
+	display: inline-block;
+	line-height: 45px;
+	padding: 10px 5px;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	font-size: 19px;
+	text-align: center;
+	font-weight: 600;
+	color: #524f4e;
+	background: white;
+	box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+	transition: .3s;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	margin-right: 40px;
+	text-align: center;
+	align-items: center;
+} /*Параметры кнопки смены языка*/
+
+select:hover {
+	background: #2EE59D;
+	box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+	color: white;
+	transform: translateY(-7px);
+} /*Эффекты при наведении*/ 
+
+select:focus {
+	background: #2EE59D;
+	box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+	color: white;
+	transform: translateY(-7px);
+} /*Эффекты в режиме нажития кнопки*/
+
+/*.logo-main {
+	height: 100%;
+	padding-bottom: 5px;
+}*/ /*Настройки логотипа в шапке (нужно заменить)*/ 
+
+.text-logo-main {
+	font-weight: 700; 
+	font-size: 50px; 
+	color: white;
+	text-decoration: none; /*Убирает подчеркивания*/
+	padding: 10px; /*Отдаление внутри элемента*/
+	margin-right: 10%; /*Отдаление вокруг элемента*/
+	animation-name: transarpent-logo;
+	animation-duration: 4s;
+}
+
+.text-logo-main:hover {
+	color: #00FFA7;
+	transition: all 0.3s ease-in-out;
+} /*Изменение цвета при наведении на лого (HIDE)*/
+
+/*Анимации при запуске сайта в шапке*/
+
+@keyframes transarpent-logo {
+	0% {opacity: 0%}
+	25% {opacity: 0%}
+	50%{opacity: 0%}
+	75%{opacity: 0%}
+	100%{opacity: 100%}
+}
+
+.list-animate1 {
+	animation-name: list-animate1;
+	animation-duration: 3s;
+}
+.list-animate2 {
+	animation-name: list-animate2;
+	animation-duration: 3s;
+}
+
+.list-animate3 {
+	animation-name: list-animate3;
+	animation-duration: 3s;
+}
+
+.list-animate4 {
+	animation-name: list-animate4;
+	animation-duration: 3s;
+}
+
+
+@keyframes list-animate1 {
+	0% {opacity: 0%}
+	25% {opacity: 100%}
+	50%{opacity: 100%}
+	75%{opacity: 100%}
+	100%{opacity: 100%}
+}
+@keyframes list-animate2 {
+	0% {opacity: 0%}
+	25% {opacity: 0%}
+	50%{opacity: 100%}
+	75%{opacity: 100%}
+	100%{opacity: 100%}
+}
+@keyframes list-animate3 {
+	0% {opacity: 0%}
+	25% {opacity: 0%}
+	50%{opacity: 0%}
+	75%{opacity: 100%}
+	100%{opacity: 100%}
+}
+@keyframes list-animate4 {
+	0% {opacity: 0%}
+	25% {opacity: 0%}
+	50%{opacity: 0%}
+	75%{opacity: 0%}
+	100%{opacity: 100%}
+}
+
+/*Конец Header*/
+
+
+/*Начало Sidebars*/
+
+.first-sidebar-left {
+	width: 45%;
+	min-height: 10%;
+	max-height: 20%;
+	margin-top: -4.5%;
+	padding-right: 2%;
+	color: white;
+	font-size: 22px;
+	background-image: url(img/main-sidebar-left.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	float: left;
+/*	border-bottom: 1px solid #00FFA7; 
+	border-bottom-width: 5px; 
+	border-bottom-color: #00FFA7; */ 
+	border-right: 1px solid gray;
+	border-right-color: gray;
+	border-right-width: 3px; /*Линня спрваа элемента*/
+}
+
+.side-bar-text {
+	margin: 10%;
+}
+
+.side-bar-button {
+	margin-left: 10%;
+}
+
+.hide-main-text {
+	margin-bottom: 0;
+	padding-top: 20%;
+} /*Параметры заглавного слова 'HIDE'*/
+
+.glow {
+	font-size: 80px;
+	color: #fff; 	
+	animation: glow 1s ease-in-out infinite alternate;
+} /*Параметры анмации текста*/
+
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00FFA7, 0 0 40px #00FFA7, 0 0 50px #00FFA7, 0 0 60px #00FFA7, 0 0 70px #00FFA7;
+}
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #00FFA7, 0 0 40px #00FFA7, 0 0 50px #00FFA7, 0 0 60px #00FFA7, 0 0 70px #00FFA7, 0 0 80px #00FFA7;
+  }
+} /*Параметры анмации*/
+
+
+.other-btn-animated {
+	text-decoration: none;
+	display: inline-block;
+	width: 80%;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 10px;
+	font-size: 19px;
+	text-align: center;
+	font-weight: 600;
+	color: #524f4e;
+	background: white;
+	box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+	transition: .3s;
+	margin-top: 5%;
+	margin-bottom: 5%;
+} /*Параметры кнопок вне блока 'header'*/
+
+.other-btn-animated:hover {
+	background: #2EE59D;
+	box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+	color: white;
+	transform: translateY(-7px);
+} /*Анимация кнопки при наведении*/
+
+.first-sidebar-right {
+	width: 55%;
+	height: auto;
+	float: left;
+	z-index: -1;
+/*	background-color: black;*/
+} /*Параметры правого сайдбара*/
+
+.video-pos {
+	background-size:cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	float: left;
+	z-index: -4;
+} /*Параметры видео в сайдбарах*/
+
+
+.container {
+	display: flex;
+}
+
+.interblock-structure {
+	width: 100%;
+	background-color: #101111;
+	border-top: 1px solid gray;
+	border-top-width: 3px;
+	border-top-color: gray; 
+	border-bottom: 1px solid gray;
+	border-bottom-width: 3px;
+	border-bottom-color: gray; 
+} /*Параметры межблочных структур*/
+
+.interblock-structure-text {
+	font-size: 22px;
+	text-align: center;
+	padding: 2%;
+	color: white;
+} /*Параметры межблочного текста*/
+
+.second-sidebar-left {
+	width: 55%;
+	height: auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	float: left;
+	z-index: -1;
+/*	background-color: black;*/
+} /*Параметры второстепеного левого сайдбара сайдбара*/
+
+.second-sidebar-right {
+	text-align: center;
+	width: 45%;
+	min-height: 10%;
+	max-height: 20%;
+	color: white;
+/*	background-color: black;*/
+	float: left;
+	font-size: 40px;
+	background-image: url(img/main-sidebar-left.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	border-left: 1px solid gray;
+	border-left-width: 3px;
+	border-left-color: gray; 
+} /*Параметры второстепеного правого сайдбара сайдбара*/
+
+.numbers {
+	color: #00FFA7;
+	font-weight: 900;
+	margin: 5%;
+	margin-bottom: 0;
+} /*Параметры цифр во втором блоке сайта*/
+
+p {
+	font-size: 20px;
+	color: white;
+} /*Парметры текста под цифрами*/
+
+.p-fix {
+	margin-bottom: 5%;
+} /*Делает такой же отступ, как и в тексте с цифрами*/
+
+.content-no-border {
+	border-bottom: 0px solid #00FFA7;
+}
+.boxes-text {
+	color: #00FFA7;
+}
+.benefits-boxes {
+	display: flex;
+	flex-wrap: wrap;
+	width: 33%;
+	max-height: 5%;
+	background-color: #101111;
+	padding: 2rem;
+	padding-top: 7rem;
+	margin: 1%;
+	border: 3px solid #00FFA7;
+ 	border-bottom: 5px solid #00FFA7;
+}/*Параметры блоков с цифрами*/
+
+.first-box {
+	background-image: url(img/1.png);
+	background-repeat: no-repeat;
+}
+
+.second-box {
+	background-image: url(img/2.png);
+	background-repeat: no-repeat;
+}
+
+.third-box {
+	background-image: url(img/3.png);
+	background-repeat: no-repeat;
+}
+
+.fourth-box {
+	background-image: url(img/4.png);
+	background-repeat: no-repeat;
+}
+
+.fifth-box {
+	background-image: url(img/5.png);
+	background-repeat: no-repeat;
+}
+
+.sixth-box {
+	background-image: url(img/6.png);
+	background-repeat: no-repeat;	
+}
+
+.container-benefit {
+	display: flex;
+	width: 100%;
+	background-color: #101111;
+
+}
+
+.benefit-boxes-border {
+	border-bottom: 1px solid gray;
+	border-bottom: color: gray;
+	border-bottom: width: 3px; /*Линня снизу элемента*/
+}
+
+.third-sidebar-left {
+	width: 45%;
+	min-height: 10%;
+	max-height: 20%;
+	padding-right: 2%;
+	color: white;
+	font-size: 22px;
+	background-image: url(img/main-sidebar-left.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	float: left;
+/*	border-bottom: 1px solid #00FFA7; 
+	border-bottom-width: 5px; 
+	border-bottom-color: #00FFA7; */ 
+	border-right: 1px solid gray;
+	border-right-color: gray;
+	border-right-width: 3px; /*Линня спрваа элемента*/
+	border-top: 1px solid gray;
+	border-top: color: gray;
+	border-top: width: 3px; /*Линня спрваа элемента*/
+	float: left;
+} 
+
+.advanced-sh-text {
+	margin: 10%;
+}
+
+.third-sidebar-right {
+	width: 55%;
+	min-height: 10%
+	max-height: 20%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	float: left;
+	z-index: -1;
+	border-top: 1px solid gray;
+	border-top: color: gray;
+	border-top: width: 3px; /*Линня спрваа элемента*/
+} /*Параметры треьего правого айдбара*/
