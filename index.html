@@ -4,9 +4,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title class="lng-title">Hide - самый удобный мессенджер</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="img/logo-main-white.png" type="image/x-con">
 </head>
 <body>
@@ -164,13 +164,10 @@
 	</div>
 </div>
 
-<!-- Тут должен быть будущий слайдер фотографий -->
-<!-- <div class="screen-slider">
-	
-</div> -->
-<!-- Контент после 2 сайдбара (2 ряд) -->
+							<!-- Тут должен быть будущий слайдер фотографий -->
 
-<div class="container-benefit benefit-boxes-border">
+<div class="container-benefit slider-benefit benefit-boxes-border">
+
 	<div class="benefits-boxes fourth-box">
 		<h2 class="lng-integration boxes-text">
 			Интегрированность
@@ -181,6 +178,12 @@
 			возможность получать информацию о разговоре 
 			и сообщениях прямо внутри игры.
 		</p>
+	</div>
+
+	<div class="fotorama benefit-slider" data-min-width="100%" data-min-height="60%" data-ratio="9/21" data-width="500" data-height="500" data-nav="false" >
+		<img src="img/main-sidebar-left.png">
+		<img src="img/main-sidebar-left5.png">
+		<img src="img/main-sidebar-left10.png">
 	</div>
 
 	<div class="benefits-boxes fifth-box">
@@ -195,20 +198,6 @@
 			не переживать о утечке ваших данных.
 		</p>
 	</div>
-
-	<div class="benefits-boxes sixth-box">
-		<h2 class="lng-modernity boxes-text">
-			Современность
-		</h2>
-
-		<p class="lng-sixth-benefit-block">
-			Hide оснащён самыми современными технологиями,
-			которые не уступают конкурентам, а в некоторых 
-			случаях даже отрываються вперед. Чего только стоит 
-			расширенная демонстрация экрана и обмен данными 
-			напрямую без серверов. 
-		</p>
-	</div>
 </div>
 
 <!-- Третий сайдбар (Левый (текст))  -->
@@ -216,7 +205,7 @@
 <div class="container container-screen-sharing">
 	
 	<div class="third-sidebar-left">
-		<h1 class="advanced-sh-text glow">
+		<h1 class="advanced-sh-text glow side-bar-text">
 			Advanced Screen Sharing
 		</h1>
 
@@ -230,24 +219,20 @@
 			получат возможность управления компьютером собеседника. 
 		</p>
 
-		<p class="lng-sb-text-third-second-block side-bar-text">
+		<p class="lng-sb-text-third-second-block side-bar-text side-bar-text-fix">
 			Эта функция открывает множество возможностей для 
 			разных видов пользователей. От игры на слабой конфигурации
 			компьютера в самые требовательные игры  без задержек и лагов,
 			до удобной работы разработчиков, которые смогут дистанционно давать 
 			доступ к своей проекту.
 		</p>
-
 	</div>
-
 						<!-- Третий сайдбар (правый (видео)) -->
-
-		<div class="third-sidebar-right">
-			<video class="video-pos" autoplay muted loop style="opacity: 0.3;">
-				<source src="img/background2.mp4" type="video/mp4">
-			</video>
-		</div>
-
+	<div class="fotorama slider-sidebar" data-min-width="100%" data-min-height="60%" data-ratio="9/21" data-width="500" data-height="500" data-nav="false" >
+		<img src="img/main-sidebar-left.png">
+		<img src="img/main-sidebar-left5.png">
+		<img src="img/main-sidebar-left10.png">
+	</div>
 </div>
 
 
@@ -267,6 +252,10 @@ function myFunction() {
 }
 </script>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 <script src="lang.js"></script>
 <script src="app.js"></script>
 <script src="script.js"></script>
