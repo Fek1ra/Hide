@@ -291,9 +291,13 @@ select:focus {
 	border-bottom-width: 3px;
 	border-bottom-color: silver; 
 	border-right: 0px solid silver;
+	text-align: center;
   }
   .navbar {
   	align-items: center;
+  }
+  .side-bar-button {
+  	margin-left: 0%;
   }
 }
 
@@ -380,71 +384,78 @@ p {
 	color: #00FFA7;
 }
 
+.container-benefit {
+	background-color: #101111;
+	display: flex;
+	flex-direction: row;
+}
+
 .benefits-boxes {
-	width: 33%;
-	min-height: 5%;
-	max-height: 5%;
+	display: flex;
+	flex-direction: row;
 	background-color: #101111;
 	padding: 2rem;
 	padding-top: 7rem;
 	margin: 1%;
 	border: 3px solid #00FFA7;
  	border-bottom: 5px solid #00FFA7;
+
 }/*Параметры блоков с цифрами*/
 
 
 .first-box {
 	background-image: url(img/1.png);
 	background-repeat: no-repeat;
+	flex-direction: column;
+	width: 20%;
 }
 
 .second-box {
 	background-image: url(img/2.png);
 	background-repeat: no-repeat;
+	flex-direction: column;
+	width: 20%;
 }
 
 .third-box {
 	background-image: url(img/3.png);
 	background-repeat: no-repeat;
+	flex-direction: column;
+	width: 20%;
 }
+
 .fourth-box {
 	background-image: url(img/4.png);
 	background-repeat: no-repeat;
+	flex-direction: column;
+	width: 20%;
 }
 
 .fifth-box {
 	background-image: url(img/5.png);
 	background-repeat: no-repeat;
+	flex-direction: column;
+	width: 20%;
 }
 
 
 
 @media (max-width: 600px) {
-	.benefits-boxes {
+	.first-box {
+		display: flex;
 		min-width: 100%;
 	}
-}
-
-.container-benefit {
-	background-color: #101111;
 }
 
 .container-prev-app {
 	width: 100%;
 	background-color: #101111;
 	align-items: center;
-	border-top: 1px solid silver;
-	border-top-width: 3px;
-	border-top-color: silver;
-	border-bottom: 1px solid silver;
-	border-bottom-width: 3px;
-	border-bottom-color: silver;
+
 }
 
-
-
 .third-sidebar-left {
-	width: 40%;
+	width: 37.7%;
 	padding-right: 2%;
 	padding: bottom: 3%;
 	color: white;
@@ -467,12 +478,37 @@ p {
 .third-sidebar-right {
 	align-items: center;
 	display: flex;
-	width: 60%;
-}
-.advanced-sh-text {
-	font-size: 50px;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-top: 5%;
+	width: 62.3%;
+	border-top: 1px solid silver;
+	border-top-width: 3px;
+	border-top-color: silver;
+	border-bottom: 1px solid silver;
+	border-bottom-width: 3px;
+	border-bottom-color: silver;
+	background-color: #101111;
 }
 
+.themes-text {
+	margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+	.third-sidebar-left {
+		min-width: 100%;
+		text-align: center;
+		padding-right: 0%;
+		padding: bottom: 0%;
+	}
+
+	.themes-text {
+		margin-bottom: 0;
+		padding-top: 1rem;
+	}
+	.third-sidebar-right {
+		display: flex;
+	}
+	.container-benefit {
+		display: flex;
+		flex-direction: column;
+	}
+}
