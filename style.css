@@ -2,7 +2,6 @@ body {
 	margin: 0;
 	font-family: 'Alegreya Sans SC', sans-serif;
 	background-color: #1B1617;
-/*	height: 700vh; *//*Длина сайта в 7 экранов*/
 	display: block;
 	scroll-behavior: smooth;
 }
@@ -18,27 +17,22 @@ body {
 } /*Отдаление от закрепленной шапки*/
 
 .navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
 	width: 100%;
-	height: 70px;
+	height: inherit;
 	box-shadow: 0 20px 10px rgba(0, 0, 0, .1); /*Добавляет тень под элемент*/
 	border-bottom: 1px solid #00FFA7; /*Полоса под шапкой*/
 	border-bottom-width: 5px; /*Ширина полосы*/
 	border-bottom-color: #00FFA7; /*Цвет полосы*/
 	z-index: 999;
-}
-
-.navbar .container {
-	height: inherit; /* Уравнение высоты по высоте родителя (В данном случае 'HIDE')*/
-	display: flex; 
-	justify-content: flex-start; /*Отвечает за расположение єлементов с пробелами друг от друга*/
-	align-items: center; /*Распологает элементы по центру в блоке 'navbar' */
 	background-color: rgb(29, 31, 32);
 }
 
 .navbar-menu {
 	list-style-type: none;
-	padding-left: 0;
-	display: flex;
 }
 
 .navbar-menu li {
@@ -47,11 +41,11 @@ body {
 
 .navbar-menu li a {
 	font-size: 20px;
+	margin-right: 0.5rem;
 	display: inline-block; /*Отображение элементов в линию*/
 	color: white;
 	opacity: 0.9; /*Прозрачность текста*/
 	text-decoration: none; /*Убирает подчеркивания*/
-	padding: 10px; /*Отдаление вокруг элемента*/
 	transition: all 0.2s ease-in-out; /*Длительность анимаций*/
 }
 
@@ -60,27 +54,9 @@ body {
 	opacity: 1;
 } /*Измена цвета при наведении на тект*/
 
-.navbar-wrap {
-	display: flex; 
-	flex-flow: row nowrap; /*Располагает элементы в ряд без смещений (Справочник)*/
+.nav-buttons {
+
 }
-
-.buy-hide {
-	margin-right: 40px;
-	margin-left: 2%;
-	padding: 10px 60px;
-} /*Отступы кнопки покупки*/
-
-.log-hide {
-	margin-right: 40px;
-	margin-left: 2%;
-	padding: 10px 60px;
-} /*Отступы кнопки авторизации*/
-
-.reg-hide {
-	margin-left: auto;
-	padding: 10px 60px;
-} /*Отступы кнопки регистрации*/
 
 .nav-btn {
 	text-decoration: none;
@@ -104,8 +80,6 @@ body {
 
 select {
 	text-decoration: none;
-	display: inline-block;
-	line-height: 45px;
 	padding: 10px 5px;
 	border-radius: 10px;
 	border-bottom-right-radius: 0px;
@@ -117,12 +91,7 @@ select {
 	background: white;
 	box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
 	transition: .3s;
-	margin-top: 5%;
-	margin-bottom: 5%;
 	font-family: 'Alegreya Sans SC', sans-serif;
-	margin-right: 40px;
-	text-align: center;
-	align-items: center;
 } /*Параметры кнопки смены языка*/
 
 select:hover {
@@ -139,18 +108,11 @@ select:focus {
 	transform: translateY(-7px);
 } /*Эффекты в режиме нажития кнопки*/
 
-/*.logo-main {
-	height: 100%;
-	padding-bottom: 5px;
-}*/ /*Настройки логотипа в шапке (нужно заменить)*/ 
-
 .text-logo-main {
 	font-weight: 700; 
 	font-size: 50px; 
 	color: white;
 	text-decoration: none; /*Убирает подчеркивания*/
-	padding: 10px; /*Отдаление внутри элемента*/
-	margin-right: 10%; /*Отдаление вокруг элемента*/
 	animation-name: transarpent-logo;
 	animation-duration: 4s;
 }
@@ -224,27 +186,22 @@ select:focus {
 
 /*Начало Sidebars*/
 
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+
 .first-sidebar-left {
-	width: 45%;
-	min-height: 5%;
-	max-height: 5%;
-	padding-right: 2%;
 	color: white;
 	font-size: 22px;
 	background-image: url(img/main-sidebar-left.png);
-	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 	float: left;
-/*	border-bottom: 1px solid #00FFA7; 
-	border-bottom-width: 5px; 
-	border-bottom-color: #00FFA7; */ 
-	border-right: 1px solid gray;
-	border-right-color: gray;
+	border-right: 1px solid silver;
+	border-right-color: silver;
 	border-right-width: 3px; /*Линня спрваа элемента*/
 }
 
@@ -305,8 +262,7 @@ select:focus {
 } /*Анимация кнопки при наведении*/
 
 .first-sidebar-right {
-	width: 55%;
-	height: auto;
+	min-width: 55%;
 	float: left;
 	z-index: -1;
 /*	background-color: black;*/
@@ -323,19 +279,33 @@ select:focus {
 } /*Параметры видео в сайдбарах*/
 
 
-.container {
-	display: flex;
+@media (max-width: 600px) {
+  .container {
+  	display: flex;
+  	flex-direction: column;
+  }
+  .first-sidebar-left {
+  	min-width: 100%;
+  	margin-top: 0;
+	border-bottom: 1px solid silver;
+	border-bottom-width: 3px;
+	border-bottom-color: silver; 
+	border-right: 0px solid silver;
+  }
+  .navbar {
+  	align-items: center;
+  }
 }
 
 .interblock-structure {
 	width: 100%;
 	background-color: #101111;
-	border-top: 1px solid gray;
+	border-top: 1px solid silver;
 	border-top-width: 3px;
-	border-top-color: gray; 
-	border-bottom: 1px solid gray;
+	border-top-color: silver; 
+	border-bottom: 1px solid silver;
 	border-bottom-width: 3px;
-	border-bottom-color: gray; 
+	border-bottom-color: silver; 
 } /*Параметры межблочных структур*/
 
 .interblock-structure-text {
@@ -348,9 +318,6 @@ select:focus {
 .second-sidebar-left {
 	width: 55%;
 	height: auto;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 	float: left;
 	z-index: -1;
@@ -370,14 +337,25 @@ select:focus {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
-	border-left: 1px solid gray;
+	border-left: 1px solid silver;
 	border-left-width: 3px;
-	border-left-color: gray; 
+	border-left-color: silver; 
 } /*Параметры второстепеного правого сайдбара сайдбара*/
+
+@media (max-width: 600px) {
+  .second-sidebar-left {
+  	min-width: 100%;	 	
+  }
+  .second-sidebar-right {
+  	min-width: 100%;
+  	border-left: 0px solid silver;	
+  	border-top: 1px solid silver;
+	border-top-width: 3px;
+	border-top-color: silver; 
+  }
+}
+
 
 .numbers {
 	color: #00FFA7;
@@ -401,9 +379,8 @@ p {
 .boxes-text {
 	color: #00FFA7;
 }
+
 .benefits-boxes {
-	display: flex;
-	flex-wrap: wrap;
 	width: 33%;
 	min-height: 5%;
 	max-height: 5%;
@@ -414,6 +391,7 @@ p {
 	border: 3px solid #00FFA7;
  	border-bottom: 5px solid #00FFA7;
 }/*Параметры блоков с цифрами*/
+
 
 .first-box {
 	background-image: url(img/1.png);
@@ -429,7 +407,6 @@ p {
 	background-image: url(img/3.png);
 	background-repeat: no-repeat;
 }
-
 .fourth-box {
 	background-image: url(img/4.png);
 	background-repeat: no-repeat;
@@ -440,25 +417,34 @@ p {
 	background-repeat: no-repeat;
 }
 
+
+
+@media (max-width: 600px) {
+	.benefits-boxes {
+		min-width: 100%;
+	}
+}
+
 .container-benefit {
-	display: flex;
-	width: 100%;
-	min-height: 3%;
-	max-height: 3%;
 	background-color: #101111;
-
 }
 
-.benefit-boxes-border {
-	border-bottom: 4px solid gray;
-	border-bottom: color: gray;
-	border-bottom: width: 3px; /*Линня снизу элемента*/
+.container-prev-app {
+	width: 100%;
+	background-color: #101111;
+	align-items: center;
+	border-top: 1px solid silver;
+	border-top-width: 3px;
+	border-top-color: silver;
+	border-bottom: 1px solid silver;
+	border-bottom-width: 3px;
+	border-bottom-color: silver;
 }
+
+
 
 .third-sidebar-left {
-	width: 45%;
-	min-height: 1%;
-	max-height: 1%;
+	width: 40%;
 	padding-right: 2%;
 	padding: bottom: 3%;
 	color: white;
@@ -469,53 +455,24 @@ p {
 	background-attachment: fixed;
 	background-size: cover;
 	float: left;
-/*	border-bottom: 1px solid #00FFA7; 
-	border-bottom-width: 5px; 
-	border-bottom-color: #00FFA7; */ 
-	border-right: 1px solid gray;
-	border-right-color: gray;
+	border-top: 1px solid silver;
+	border-top-color: silver;
+	border-top-width: 3px;
+	border-right: 1px solid silver;
+	border-right-color: silver;
 	border-right-width: 3px; /*Линня спрваа элемента*/
 	float: left;
 } 
 
+.third-sidebar-right {
+	align-items: center;
+	display: flex;
+	width: 60%;
+}
 .advanced-sh-text {
 	font-size: 50px;
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 5%;
-}
-
-.fotorama {
-
-}
-
-.container-screen-sharing {
-	background-color: #101111;
-	width: 100%;
-	min-height: 3%;
-	max-height: 3%;
-}
-
-.slider-sidebar {
-	width: 55%;
-	margin-top: 2%;
-	margin-bottom: 2%;
-} /*Параметры треьего правого айдбара*/
-
-
-.benefit-slider {
-	width: 33%;
-	padding-right: 2rem;
-	padding-left: 2rem;
-	margin: 1%;
-	border: 3px solid white;
-}
-
-.side-bar-text-fix {
-	margin-bottom: 0%;
-}
-
-.slider {
-	width: 55%;
 }
 
