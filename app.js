@@ -22,11 +22,8 @@ function changeLanguage() {
 	document.querySelector('title').innerHTML = langArr['unit'][hash];
 	// document.querySelector('.lng-chip').innerHTML = langArr['chip'][hash];
 	for (let key in langArr) {
-		let elem = document.querySelector('.lng-' + key);
-		if (elem) {
-			elem.innerHTML = langArr[key][hash];
-		}
-
+		let elem = document.querySelectorAll('.lng-' + key);
+		elem.forEach(el => el.innerHTML = langArr[key][hash]);
 	}
 }
 
