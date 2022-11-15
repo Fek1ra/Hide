@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	font-family: 'Alegreya Sans SC', sans-serif;
@@ -22,7 +26,6 @@ body {
 	align-items: center;
 	justify-content: flex-start;
 	width: 100%;
-	height: inherit;
 	box-shadow: 0 20px 10px rgba(0, 0, 0, .1); /*Добавляет тень под элемент*/
 	border-bottom: 1px solid #00FFA7; /*Полоса под шапкой*/
 	border-bottom-width: 5px; /*Ширина полосы*/
@@ -33,6 +36,8 @@ body {
 
 .navbar-menu {
 	list-style-type: none;
+	padding: 0;
+	flex-grow: 1;
 }
 
 .navbar-menu li {
@@ -55,12 +60,14 @@ body {
 } /*Измена цвета при наведении на тект*/
 
 .nav-buttons {
-
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
 }
 
 .nav-btn {
 	text-decoration: none;
-	padding: 10px 60px;
+	padding: 10px 30px;
 	color: #524f4e;
 	text-align: center; /*item-align items center*/
 	border-radius: 10px;
@@ -115,6 +122,7 @@ select:focus {
 	text-decoration: none; /*Убирает подчеркивания*/
 	animation-name: transarpent-logo;
 	animation-duration: 4s;
+	margin-right: 2rem;;
 }
 
 .text-logo-main:hover {
@@ -279,7 +287,7 @@ select:focus {
 } /*Параметры видео в сайдбарах*/
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .container {
   	display: flex;
   	flex-direction: column;
@@ -347,7 +355,7 @@ select:focus {
 	border-left-color: silver; 
 } /*Параметры второстепеного правого сайдбара сайдбара*/
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .second-sidebar-left {
   	min-width: 100%;	 	
   }
@@ -377,8 +385,11 @@ p {
 	margin-bottom: 5%;
 } /*Делает такой же отступ, как и в тексте с цифрами*/
 
-.content-no-border {
-	border-bottom: 0px solid #00FFA7;
+.content-no-top-border {
+	border-top: 0;
+}
+.content-no-bottom-border {
+	border-bottom: 0;
 }
 .boxes-text {
 	color: #00FFA7;
@@ -388,64 +399,44 @@ p {
 	background-color: #101111;
 	display: flex;
 	flex-direction: row;
+	gap: 1rem;
+	justify-content: space-evenly;
 }
 
 .benefits-boxes {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	background-color: #101111;
 	padding: 2rem;
 	padding-top: 7rem;
-	margin: 1%;
 	border: 3px solid #00FFA7;
  	border-bottom: 5px solid #00FFA7;
-
+	background-repeat: no-repeat;
+	width: 20%;
 }/*Параметры блоков с цифрами*/
 
 
 .first-box {
 	background-image: url(img/1.png);
-	background-repeat: no-repeat;
-	flex-direction: column;
-	width: 20%;
 }
 
 .second-box {
 	background-image: url(img/2.png);
-	background-repeat: no-repeat;
-	flex-direction: column;
-	width: 20%;
 }
 
 .third-box {
 	background-image: url(img/3.png);
-	background-repeat: no-repeat;
-	flex-direction: column;
-	width: 20%;
 }
 
 .fourth-box {
 	background-image: url(img/4.png);
-	background-repeat: no-repeat;
-	flex-direction: column;
-	width: 20%;
 }
 
 .fifth-box {
 	background-image: url(img/5.png);
-	background-repeat: no-repeat;
-	flex-direction: column;
-	width: 20%;
 }
 
 
-
-@media (max-width: 600px) {
-	.first-box {
-		display: flex;
-		min-width: 100%;
-	}
-}
 
 .container-prev-app {
 	width: 100%;
@@ -454,10 +445,19 @@ p {
 
 }
 
+.container-theme {
+	gap: 0;
+}
+
+.container-gap {
+	background-color: silver;
+	gap: 3px;
+}
+
 .third-sidebar-left {
 	width: 37.7%;
 	padding-right: 2%;
-	padding: bottom: 3%;
+	padding-bottom: 3%;
 	color: white;
 	font-size: 22px;
 	background-image: url(img/main-sidebar-left.png);
@@ -466,9 +466,6 @@ p {
 	background-attachment: fixed;
 	background-size: cover;
 	float: left;
-	border-top: 1px solid silver;
-	border-top-color: silver;
-	border-top-width: 3px;
 	border-right: 1px solid silver;
 	border-right-color: silver;
 	border-right-width: 3px; /*Линня спрваа элемента*/
@@ -479,12 +476,6 @@ p {
 	align-items: center;
 	display: flex;
 	width: 62.3%;
-	border-top: 1px solid silver;
-	border-top-width: 3px;
-	border-top-color: silver;
-	border-bottom: 1px solid silver;
-	border-bottom-width: 3px;
-	border-bottom-color: silver;
 	background-color: #101111;
 }
 
@@ -492,12 +483,12 @@ p {
 	margin-top: 3rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 	.third-sidebar-left {
 		min-width: 100%;
 		text-align: center;
 		padding-right: 0%;
-		padding: bottom: 0%;
+		padding-bottom: 0%;
 	}
 
 	.themes-text {
@@ -507,8 +498,47 @@ p {
 	.third-sidebar-right {
 		display: flex;
 	}
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+	.container-benefit {
+		flex-wrap: wrap;
+	}
+	.benefits-boxes {
+		width: 30%;
+	}
+}
+
+@media (max-width: 800px) {
 	.container-benefit {
 		display: flex;
 		flex-direction: column;
+		padding: 2rem;
+	}
+	.benefits-boxes {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.navbar {
+		flex-direction: column;
+	}
+	.text-logo-main {
+		margin-right: 0;
+	}
+	.container-theme {
+		padding: 0rem;
+	}
+	.third-sidebar-left,
+	.third-sidebar-right {
+		width: 100%;
+		border-right: 0;
+	}
+	.third-sidebar-left {
+		border-bottom: 3px solid silver;
+	}
+	.third-sidebar-right {
+		padding: 1rem;
 	}
 }
