@@ -231,14 +231,60 @@ const langArr = {
 		+ " " + "exchange directly without servers. ",
 	},
 
+//Interblock-structure (3)
+
+		"third-interblock-structure" : {
+			"ua" : "Кастомізуй свій інтерфейс",
+			"ru" : "Кастомизируй свой интерфейс",
+			"en" : "Customize your interface",
+		},
+
 //third-sidebar-left
 
+		"themes-text" : {
+			"ua" : "Теми"
+			+ " " + "Пресети"
+			+ " " + "Звуки",
+			"ru" : "Темы"
+			+ " " + "Пресеты"
+			+ " " + "Звуки",
+			"en" : "Themes"
+			+ " " + "Presets"
+			+ " " + "Sounds",
+		},
+
+		"sb-text-main-1" : {
+			"ua" : "Персоналізуй наш месенджер",
+			"ru" : "Персонализируй наш мессенджер",
+			"en" : "Personalize our massanger",
+		},
+
 		"sb-text-third" : {
-		"ua" : "Грай в найвимогливіші ігри через комп'ютер свого друга",
-		"ru" : "Играй в самые требовательные игры через компьютер своего друга",
-		"en" : "Play the most demanding games on your friend's computer",
-	},
-		"sb-text-third-first-block" : {
+			"ua" : "В Hide ти зможеш знайти велику кількість тем і пресетів налаштувань під свій смак"
+			+ " " + "або додати своїх. За допомогою персоналізації всіх елементів месенджеру, ви можете"
+			+ " " + "змінювати кожен звук і кожен його елемент. ",
+			"ru" : "В Hide ты сможешь найти множество тем и пресетов настроек по своему вкусу "
+			+ " " + "или добавить своих. С помощью персонализации всех элементов мессенджера "
+			+ " " + "вы можете менять каждый звук и каждый его элемент. ",
+			"en" : "In Hide you can find many themes and customization presets to suit your taste"
+			+ " " + "or add your own. By personalizing all elements of messenger"
+			+ " " + "you can change every sound and every element. ",
+		},
+
+		"fourth-interblock-structure" : {
+			"ua" : "Ділись своїм доступом до екрану зі своїм співрозмовником",
+			"ru" : "Делись своим доступом к экрану с собеседником",
+			"en" : "Share your screen access with the interlocutor",
+		},
+
+		"sb-text-main-2" : {
+			"ua" : "Відкрий більше можливостей у розмові з друзями",
+			"ru" : "Открой больше возможностей в разговоре с друзьями",
+			"en" : "Unlock more options in conversation with friends",
+		},
+
+		"sb-text-fourth-1" : {
+
 		"ua" : "Hide представляє функцію Advanced Screen Sharing"
 		+ " " + "з її допомогою  користувачі, окрім доступа до перегляду екрану"
 		+ " " + "отримають можливість управління комп'ютером співрозмовника. ",
@@ -248,20 +294,112 @@ const langArr = {
 		"en" : "Hide introduces Advanced Screen Sharing. "
 		+ " " + "With its help, users, in addition to access to viewing the"
 		+ " " + "screen, will be able to control the interlocutor's computer. ",
-	},
-		"sb-text-third-second-block" : {
-		"ua" : "Ця функція відкриває безліч можливостей для різних видів"
-		+ " " + "користувачів. Від гри на слабій конфігурації комп'ятера в найвимогливіші"
-		+ " " + "ігри без затримок та лагів, до зручної роботи розробників, котрі"
-		+ " " + "зможуть дистанційно давати доступ до свого проекту",
-		"ru" : "Эта функция открывает множество возможностей для разных видов"
-		+ " " + "пользователей. От игры на слабой конфигурации компьютера в самые"
-		+ " " + "требовательные игры  без задержек и лагов, до удобной работы разработчиков, "
-		+ " " + "которые смогут дистанционно давать доступ к своему проекту. ",
-		"en" : "This feature opens up many possibilities for different"
-		+ " " + "kinds of users. From playing the most demanding games"
-		+ " " + "on a weak computer configuration without delays and lags, to the"
-		+ " " + "convenient work of developers who can remotely give access to their project. ",
-	},
+		},
+
+
+		"fifth-interblock-structure" : {
+			"ua" : "Опробуй наш месенджер за трьома тарифами",
+			"ru" : "Попробуй наш мессенджер за тремя тарифами",
+			"en" : "Try our messenger for three tariffs",
+		},
+
+		"free-trial" : {
+			"ua" : "Пробний період",
+			"ru" : "Пробный период",
+			"en" : "Free trial",
+		},
+
+		"first-tariff-block-1" : {
+			"ua" : "Завантажуючи програму вперше, ви отримуєте 15 днів пробного періоду. ",
+			"ru" : "Скачивая приложение впервые, вы получаете 15 дней пробного периода. ",
+			"en" : "When you download the app for the first time, you get a 15 day trial period. ",
+		},
+
+		"first-tariff-block-2" : {
+			"ua" : "Не має можливості завантажувати свої теми, пресети та звуки у майстерню. ",
+			"ru" : "Не имеет возможности загружать свои темы, пресеты и звуки в мастерскую.",
+			"en" : "Does not have the ability to upload your themes, presets and sounds to the workshop. ",
+		},
+
+
+		"first-tariff-block-3" : {
+			"ua" : "У просунутій демонстрації екрана максимальна кількість кадрів зменшено до 30 к/с. ",
+			"ru" : "В продвинутой демонстрации экрана максимальное количество кадров уменьшено до 30 к/c. ",
+			"en" : "In advanced screen sharing, the maximum frame rate is reduced to 30 fps. ",
+		},
+
+
+		"paid-subscription" : {
+			"ua" : "Платна підписка",
+			"ru" : "Платная подписка",
+			"en" : "Paid subscription",
+		},
+
+
+		"second-tariff-block-1" : {
+			"ua" : "Купуючи платну підписку, ви отримуєте повний функціонал месенджера. ",
+			"ru" : "Покупая платную подписку, вы получаете полный функционал мессенджера. ",
+			"en" : "By purchasing a paid subscription, you get the full functionality of the messenger. ",
+		},
+
+
+		"second-tariff-block-2" : {
+			"ua" : "Можливість завантажувати свої теми, пресети і звуки у майстерню. ",
+			"ru" : "Возможность загружать свои темы, пресеты и звуки в мастерскую. ",
+			"en" : "Ability to upload your themes, presets and sounds to the workshop. ",
+		},
+
+
+		"second-tariff-block-3" : {
+			"ua" : "Просунута демонстрація екрана не має обмежень щодо кількості кадрів на секунду. ",
+			"ru" : "Продвинутая демонстрация экрана не имеет ограничений по количеству кадров в секунду. ",
+			"en" : "Advanced Screen Sharing has no FPS limit. ",
+		},
+
+
+		"second-tariff-block-4" : {
+			"ua" : "Ви отримуєте пріоритет на допомогу у технічній підтримці. ",
+			"ru" : "Вы получаете приоритет на помощь в технической поддержке. ",
+			"en" : "You get priority technical support assistance. ",
+		},
+
+
+		"second-tariff-block-5" : {
+			"ua" : "Ви автоматично отримаєте персональний знак, як володаря повної версії програми. ",
+			"ru" : "Вы автоматически получаете персональный знак, как обладателя полной версии програмы. ",
+			"en" : "You will automatically receive a personal badge as the owner of the full version of the program. ",
+		},
+
+
+		"buy-sub-button " : {
+			"ua" : "Купити підписку",
+			"ru" : "Купить подписку",
+			"en" : "Buy subscription",
+		},
+
+		"" : {
+			"ua" : "Покупка повного доступу до месенджера",
+			"ru" : "Покупка полного доступа к мессенджеру",
+			"en" : "Buying full access to the messenger",
+		},
+
+		"third-tariff-block-1" : {
+			"ua" : "Купуючи повний доступ ви отримуєте все те ж саме, що і в платній підписці, але маєте доступ до бета-версій функцій і безмежне використання Hide. ",
+			"ru" : "Покупая полный доступ вы получаете все тоже самое, что и в платной подписке, но имеете доступ к бета версиям функций и безграничное использование Hide. ",
+			"en" : "Buying full access you get everything the same as in a paid subscription, but you have access to beta versions of functions and unlimited use of Hide. ",
+		},
+
+		"buy-all-button" : {
+			"ua" : "Купити повний доступ",
+			"ru" : "Купить полный доступ",
+			"en" : "Buy full access",
+		},
+
+
+		"" : {
+			"ua" : "",
+			"ru" : "",
+			"en" : "",
+		},
 
 }
