@@ -377,7 +377,7 @@ const langArr = {
 			"en" : "Buy subscription",
 		},
 
-		"" : {
+		"buy" : {
 			"ua" : "Покупка повного доступу до месенджера",
 			"ru" : "Покупка полного доступа к мессенджеру",
 			"en" : "Buying full access to the messenger",
