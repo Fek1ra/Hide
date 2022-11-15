@@ -298,7 +298,7 @@ const langArr = {
 
 
 		"fifth-interblock-structure" : {
-			"ua" : "Опробуй наш месенджер за трьома тарифами",
+			"ua" : "Спробуй наш месенджер за трьома тарифами",
 			"ru" : "Попробуй наш мессенджер за тремя тарифами",
 			"en" : "Try our messenger for three tariffs",
 		},
