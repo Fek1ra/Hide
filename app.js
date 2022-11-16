@@ -29,6 +29,11 @@ function changeLanguage() {
 
 changeLanguage();
 
+var language = window.navigator ? (window.navigator.language ||
+                  window.navigator.systemLanguage ||
+                  window.navigator.userLanguage) : "ru";
+language = language.substr(0, 2).toLowerCase();
+
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("fixed-navbar");
