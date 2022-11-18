@@ -10,6 +10,26 @@ body {
 	scroll-behavior: smooth;
 }
 
+ ::-webkit-scrollbar {
+    width: 15px; /* ширина нового скроллбара */
+}
+
+ ::-webkit-scrollbar-track {
+    background: #3c3c3c; /* цвет фона у дорожки */
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset; /* тень у дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #787878; /* цвет фона у дорожки */
+    border-radius: 8px; /* скругление углов */
+    transition: 3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #58605E; /* ползунок меняет цвет при наведении */
+    transition: 3s;
+}
+
 .sticky {
   position: sticky;
   top: 0;
