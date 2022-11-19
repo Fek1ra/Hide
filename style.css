@@ -10,6 +10,8 @@ body {
 	scroll-behavior: smooth;
 }
 
+/*Параметры скролбара*/
+
  ::-webkit-scrollbar {
     width: 15px; /* ширина нового скроллбара */
 }
@@ -20,7 +22,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #787878; /* цвет фона у дорожки */
+    background: #787878; /* цвет фона у ползунка */
     border-radius: 8px; /* скругление углов */
     transition: 3s;
 }
@@ -30,6 +32,7 @@ body {
     transition: 3s;
 }
 
+/*Параметры закрепления шапки*/
 .sticky {
   position: sticky;
   top: 0;
@@ -40,6 +43,7 @@ body {
   padding-top: 102px;
 } /*Отдаление от закрепленной шапки*/
 
+/*Параметры шапки*/
 .navbar {
 	display: flex;
 	flex-direction: row;
@@ -54,6 +58,7 @@ body {
 	background-color: rgb(29, 31, 32);
 }
 
+/*Параметры меню в шапке*/
 .navbar-menu {
 	list-style-type: none;
 	padding: 0;
@@ -83,7 +88,7 @@ body {
 	display: flex;
 	gap: 1rem;
 	padding: 1rem;
-}
+} /*Параметры разположения кнопок в шапке*/
 
 .nav-btn {
 	text-decoration: none;
@@ -96,7 +101,7 @@ body {
 	background: white;
 	box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
 	transition: .3s;
-}/*Параметры кнопки*/
+} /*Параметры кнопки в шапке*/
 
 .nav-btn:hover {
 	background: #2EE59D;
@@ -104,21 +109,6 @@ body {
 	color: white;
 	transform: translateY(-7px);
 } /*Эффекты кнопки при наведении*/
-
-
-@media (max-width: 800px) {
-	.nav-btn {
-		padding: 1px 8px;
-	}
-}
-
-@media (min-width: 801px) and (max-width: 1200px) {
-	.nav-btn {
-		padding: 1px 8px;
-	}
-}
-
-
 
 select {
 	text-decoration: none;
@@ -158,7 +148,7 @@ select:focus {
 	animation-name: transarpent-logo;
 	animation-duration: 4s;
 	margin-right: 2rem;;
-}
+} /*Параметры Лого в шапке*/
 
 .text-logo-main:hover {
 	color: #00FFA7;
@@ -166,14 +156,6 @@ select:focus {
 } /*Изменение цвета при наведении на лого (HIDE)*/
 
 /*Анимации при запуске сайта в шапке*/
-
-@keyframes transarpent-logo {
-	0% {opacity: 0%}
-	25% {opacity: 0%}
-	50%{opacity: 0%}
-	75%{opacity: 0%}
-	100%{opacity: 100%}
-}
 
 .list-animate1 {
 	animation-name: list-animate1;
@@ -194,6 +176,13 @@ select:focus {
 	animation-duration: 3s;
 }
 
+@keyframes transarpent-logo {
+	0% {opacity: 0%}
+	25% {opacity: 0%}
+	50%{opacity: 0%}
+	75%{opacity: 0%}
+	100%{opacity: 100%}
+}
 
 @keyframes list-animate1 {
 	0% {opacity: 0%}
@@ -224,15 +213,15 @@ select:focus {
 	100%{opacity: 100%}
 }
 
-/*Конец Header*/
+/*Конец nav-bar*/
 
 
-/*Начало Sidebars*/
+/*Начало Первых сайдбаров*/
 
 .container {
 	display: flex;
 	flex-direction: row;
-}
+} /*Параметры расположения блоков*/
 
 
 .first-sidebar-left {
@@ -246,7 +235,7 @@ select:focus {
 	border-right: 1px solid silver;
 	border-right-color: silver;
 	border-right-width: 3px; /*Линня спрваа элемента*/
-}
+} /*Парамеры 1-го левого сайдбара*/
 
 .side-bar-main-text{
 	margin-left: 10%;
@@ -267,15 +256,6 @@ select:focus {
 	margin-bottom: 0;
 	padding-top: 10%;
 } /*Параметры заглавного слова 'HIDE'*/
-
-@media (max-width: 800px) {
-	.side-bar-text {
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: 10%;
-}
-	
-}
 
 
 .glow {
@@ -323,8 +303,7 @@ select:focus {
 	min-width: 55%;
 	float: left;
 	z-index: -1;
-/*	background-color: black;*/
-} /*Параметры правого сайдбара*/
+} /*Параметры 1-го правого сайдбара*/
 
 .video-pos {
 	background-size:cover;
@@ -334,30 +313,7 @@ select:focus {
 	display: block;
 	float: left;
 	z-index: -4;
-} /*Параметры видео в сайдбарах*/
-
-
-@media (max-width: 800px) {
-  .container {
-  	display: flex;
-  	flex-direction: column;
-  }
-  .first-sidebar-left {
-  	min-width: 100%;
-  	margin-top: 0;
-	border-bottom: 1px solid silver;
-	border-bottom-width: 3px;
-	border-bottom-color: silver; 
-	border-right: 0px solid silver;
-	text-align: center;
-  }
-  .navbar {
-  	align-items: center;
-  }
-  .side-bar-button {
-  	margin-left: 0%;
-  }
-}
+} /*Параметры расположение видео в сайдбарах*/
 
 .interblock-structure {
 	width: 100%;
@@ -383,7 +339,6 @@ select:focus {
 	background-size: cover;
 	float: left;
 	z-index: -1;
-/*	background-color: black;*/
 } /*Параметры второстепеного левого сайдбара сайдбара*/
 
 .second-sidebar-right {
@@ -392,7 +347,6 @@ select:focus {
 	min-height: 5%;
 	max-height: 5%;
 	color: white;
-/*	background-color: black;*/
 	float: left;
 	font-size: 40px;
 	background-image: url(img/main-sidebar-left.png);
@@ -403,20 +357,7 @@ select:focus {
 	border-left: 1px solid silver;
 	border-left-width: 3px;
 	border-left-color: silver; 
-} /*Параметры второстепеного правого сайдбара сайдбара*/
-
-@media (max-width: 800px) {
-  .second-sidebar-left {
-  	min-width: 100%;	 	
-  }
-  .second-sidebar-right {
-  	min-width: 100%;
-  	border-left: 0px solid silver;	
-  	border-top: 1px solid silver;
-	border-top-width: 3px;
-	border-top-color: silver; 
-  }
-}
+} /*Параметры 2-го правого сайдбара сайдбара*/
 
 
 .numbers {
@@ -497,6 +438,12 @@ p {
 
 .container-middle {
 	gap: 0;
+	display: flex;
+	background-color: #101111;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	justify-content: space-evenly;
 }
 
 .container-gap {
@@ -520,14 +467,14 @@ p {
 	border-right-color: silver;
 	border-right-width: 3px; /*Линня спрваа элемента*/
 	float: left;
-} 
+} /*Параметры 3-го левого сайдбара*/
 
 .third-sidebar-right {
 	align-items: center;
 	display: flex;
 	width: 62.3%;
 	background-color: #101111;
-}
+} /*Параметры 3-го правого сайдбара*/
 
 .middle-text-main {
 	margin-bottom: 0;
@@ -537,94 +484,6 @@ p {
 .themes-text {
 	margin-top: 3rem;
 }
-
-
-@media (max-width: 800px) {
-	.third-sidebar-left {
-		min-width: 100%;
-		text-align: center;
-		padding-right: 0%;
-		padding-bottom: 0%;
-	}
-
-	.themes-text {
-		margin-bottom: 0;
-		padding-top: 1rem;
-	}
-
-	.third-sidebar-right {
-		display: flex;
-	}
-	
-	.middle-text-main {
-	padding-top: 0;
-	}	
-}
-
-@media (min-width: 801px) and (max-width: 1200px) {
-	.container-benefit {
-		flex-wrap: wrap;
-	}
-
-	.benefits-boxes {
-		width: 30%;
-	}
-
-	.third-sidebar-left {
-		min-width: 100%;
-		text-align: center;
-		padding-right: 0%;
-		padding-bottom: 0%;
-	}
-}
-
-
-@media (max-width: 800px) {
-	.container-benefit {
-		display: flex;
-		flex-direction: column;
-		padding: 2rem;
-	}
-	.benefits-boxes {
-		width: 100%;
-	}
-}
-
-@media (max-width: 1200px) {
-	.navbar {
-		flex-direction: column;
-	}
-
-	.text-logo-main {
-		margin-right: 0;
-	}
-
-	.container-theme {
-		padding: 0rem;
-	}
-
-	.third-sidebar-left,
-	.third-sidebar-right {
-		width: 100%;
-		border-right: 0;
-	}
-
-	.third-sidebar-left {
-		border-bottom: 3px solid silver;
-	}
-
-	.third-sidebar-right {
-		padding: 1rem;
-	}
-
-}
-
-@media (min-width: 1200px) {
-	.responsive-sb-text-third {
-		font-size: 30px;
-	}	
-}		
-
 
 .fourth-sidebar-left {
 	width: 37.7%;
@@ -642,14 +501,14 @@ p {
 	border-right-color: silver;
 	border-right-width: 3px; 
 	float: left;
-}
+} /*Параметры 4-го левого сайдбара*/
 
 .fourth-sidebar-right {
 	align-items: center;
 	display: flex;
 	width: 62.3%;
 	background-color: #101111;
-}
+} /*Параметры 4-го правого сайдбара*/
 
 .advanced-screen-sharing-text {
 	font-size: 60px;
@@ -663,48 +522,6 @@ p {
 	font-size: 30px;
 }
 
-@media (max-width: 800px) {
-	.fourth-sidebar-left {
-		min-width: 100%;
-		text-align: center;
-		padding-right: 0%;
-		padding-bottom: 0%;
-	}
-
-	.themes-text {
-		margin-bottom: 0;
-		padding-top: 1rem;
-	}
-
-	.fourth-sidebar-right {
-		display: flex;
-	}
-	
-	.themes-text-main {
-	padding-top: 0;
-	}	
-}
-
-@media (max-width: 1200px) {
-	.container-middle {
-		padding: 0rem;
-	}
-
-	.fourth-sidebar-left,
-	.fourth-sidebar-right {
-		width: 100%;
-		border-right: 0;
-	}
-
-	.fourth-sidebar-left {
-		border-bottom: 3px solid silver;
-	}
-
-	.fourth-sidebar-right {
-		padding: 1rem;
-	}
-}
-
 .tariffs-boxes {
 	display: flex;
 	flex-direction: column;
@@ -715,7 +532,7 @@ p {
 	background-repeat: no-repeat;
 	width: 33%;
 	text-align: center;
-}
+} /*Параметры блоков с покупками*/
 
 .container-tariffs {
 	background-color: #101111;
@@ -723,30 +540,6 @@ p {
 	flex-direction: row;
 	gap: 1rem;
 	justify-content: space-evenly;
-}
-
-@media (min-width: 801px) and (max-width: 1000px) {
-	.container-tariffs {
-		display: flex;
-		flex-direction: column;
-		padding: 2rem;
-	}
-
-	.tariffs-boxes {
-		width: 100%;
-	}
-}
-
-
-@media (max-width: 800px) {
-	.container-tariffs {
-		display: flex;
-		flex-direction: column;
-		padding: 2rem;
-	}
-	.tariffs-boxes {
-		width: 100%;
-	}
 }
 
 .tariff-button {
@@ -758,14 +551,20 @@ p {
 
 .text-box-1 {
 	font-size: 25px;
+	padding-right: 2rem;
+	padding-left: 2rem;
 }
 
 .text-box-2 {
 	font-size: 20px;
+	padding-right: 2rem;
+	padding-left: 2rem;
 }
 
 .text-box-3 {
 	font-size: 30px;
+	padding-right: 2rem;
+	padding-left: 2rem;
 }
 
 .buttons-last {
@@ -803,6 +602,194 @@ p {
 	border-top: 0;
 }
 
+
+/* Параметры для телефона*/
+
+@media (max-width: 800px) {
+
+	.navbar {
+		align-items: center;
+	}
+
+	.nav-btn {
+		padding: 1px 8px;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.first-sidebar-left {
+		min-width: 100%;
+		margin-top: 0;
+		border-bottom: 1px solid silver;
+		border-bottom-width: 3px;
+		border-bottom-color: silver; 
+		border-right: 0px solid silver;
+		text-align: center;
+  	}
+
+	.side-bar-text {
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-top: 10%;
+	}
+
+	.hide-main-text{
+		padding-top: 0;
+	}
+
+
+	.side-bar-button {
+		margin-left: 0%;
+	}
+
+	.second-sidebar-left {
+		min-width: 100%;	 	
+	}
+
+	.second-sidebar-right {
+		min-width: 100%;
+		border-left: 0px solid silver;	
+		border-top: 1px solid silver;
+		border-top-width: 3px;
+		border-top-color: silver; 
+	}
+
+	.container-benefit {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	.benefits-boxes {
+		width: 100%;
+	}
+
+	.third-sidebar-left {
+		min-width: 100%;
+		text-align: center;
+		padding-right: 0%;
+		padding-bottom: 0%;
+	}
+
+	.themes-text {
+		margin-bottom: 0;
+		padding-top: 1rem;
+	}
+
+	.third-sidebar-right {
+		display: flex;
+	}
+	
+	.container-middle {
+		display: flex;
+		flex-direction: column;
+		padding: 0rem;
+	}
+
+	.middle-text-main {
+		padding-top: 0;
+	}	
+
+	.fourth-sidebar-left {
+		min-width: 100%;
+		text-align: center;
+		padding-right: 0%;
+		padding-bottom: 0%;
+	}
+
+	.fourth-sidebar-right {
+		display: flex;
+	}
+	
+	.themes-text-main {
+		padding-top: 0;
+	}	
+
+	.container-tariffs {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	.buttons-last {
+		display: none;
+	}
+	.tariffs-boxes {
+		border-bottom: 3px solid #00FFA7;
+		width: 100%;
+	}
+
+	.tariff-button-mobile {
+		display: inline-block;
+	}
+}
+
+/*Адаптация для планшета*/
+
+@media (min-width: 801px) and (max-width: 1200px) {
+
+	.nav-btn {
+		padding: 1px 8px;
+	}
+
+	.container-benefit {
+		flex-wrap: wrap;
+	}
+
+	.benefits-boxes {
+		width: 30%;
+	}
+
+	.third-sidebar-left {
+		min-width: 100%;
+		text-align: center;
+		padding-right: 0%;
+		padding-bottom: 0%;
+	}
+
+	.middle-text-main {
+		padding-top: 0;
+	}
+
+	.container-middle {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+
+	.container-tariffs {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	.tariffs-boxes {
+		width: 100%;
+	}
+
+	.tariff-button-mobile {
+		display: inline-block;
+	}
+
+	.buttons-last {
+		display: none;
+	}
+
+	.tariffs-boxes {
+		border-bottom: 3px solid #00FFA7;
+	}
+
+}
+
+/*Адаптация под пк*/ 
+
 @media (min-width: 1001px) and (max-width: 1200px) {
 
 	.tariff-button-mobile {
@@ -810,36 +797,63 @@ p {
 	}
 }
 
-@media (min-width: 801px) and (max-width: 1000px) {
+@media (max-width: 1200px) {
 
-	.tariff-button-mobile {
-		display: inline-block;
-	}
-
-	.buttons-last {
-		display: none;
+	.navbar {
+		flex-direction: column;
 	}
 
-	.tariffs-boxes {
-		border-bottom: 3px solid #00FFA7;
-	}
-}
-
-@media (max-width: 800px) {
-	.buttons-last {
-		display: none;
-	}
-	.tariffs-boxes {
-		border-bottom: 3px solid #00FFA7;
+	.text-logo-main {
+		margin-right: 0;
 	}
 
-	.tariff-button-mobile {
-		display: inline-block;
+	.container-theme {
+		padding: 0rem;
 	}
+
+	.third-sidebar-left,
+	.third-sidebar-right {
+		width: 100%;
+		border-right: 0;
+	}
+
+	.third-sidebar-left {
+		border-bottom: 3px solid silver;
+	}
+
+	.third-sidebar-right {
+		padding: 1rem;
+	}
+
+	.container-middle {
+		padding: 0rem;
+	}
+
+	.fourth-sidebar-left,
+	.fourth-sidebar-right {
+		width: 100%;
+		border-right: 0;
+	}
+
+	.fourth-sidebar-left {
+		border-bottom: 3px solid silver;
+	}
+
+	.fourth-sidebar-right {
+		padding: 1rem;
+	}
+
 }
 
 @media (min-width: 1200px) {
+
+	.responsive-sb-text-third {
+		font-size: 30px;
+	}	
+
 	.tariff-button-mobile {
 		display: none;
 	}
-}
+
+}		
+
