@@ -225,6 +225,7 @@ select:focus {
 
 
 .first-sidebar-left {
+	display: grid;
 	color: white;
 	font-size: 22px;
 	background-image: url(img/main-sidebar-left.png);
@@ -258,21 +259,10 @@ select:focus {
 } /*Параметры заглавного слова 'HIDE'*/
 
 
-.glow {
+.heading-paragraph {
 	font-size: 80px;
-	color: #fff; 	
-	animation: glow 1s ease-in-out infinite alternate;
-} /*Параметры анмации текста*/
-
-@-webkit-keyframes glow {
-	from {
-		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00FFA7, 0 0 40px #00FFA7, 0 0 50px #00FFA7, 0 0 60px #00FFA7, 0 0 70px #00FFA7;
-}
-	to {
-		text-shadow: 0 0 20px #fff, 0 0 30px #00FFA7, 0 0 40px #00FFA7, 0 0 50px #00FFA7, 0 0 60px #00FFA7, 0 0 70px #00FFA7, 0 0 80px #00FFA7;
-  }
-} /*Параметры анмации*/
-
+	color: #7FFFD4;
+} 
 
 .other-btn-animated {
 	text-decoration: none;
@@ -372,6 +362,10 @@ p {
 	color: white;
 } /*Парметры текста под цифрами*/
 
+.text-fix {
+	margin: 5%;
+}
+
 .p-fix {
 	margin-bottom: 5%;
 } /*Делает такой же отступ, как и в тексте с цифрами*/
@@ -383,7 +377,7 @@ p {
 	border-bottom: 0;
 }
 .boxes-text {
-	color: #00FFA7;
+	color: #7FFFD4;
 }
 
 .container-benefit {
@@ -437,21 +431,16 @@ p {
 }
 
 .container-middle {
-	gap: 0;
-	display: flex;
 	background-color: #101111;
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
-	justify-content: space-evenly;
 }
 
-.container-gap {
+/* .container-gap {
 	background-color: silver;
 	gap: 3px;
-}
+} */
 
 .third-sidebar-left {
+	display: grid;
 	width: 37.7%;
 	padding-right: 2%;
 	padding-bottom: 3%;
@@ -486,6 +475,7 @@ p {
 }
 
 .fourth-sidebar-left {
+	display: grid;
 	width: 37.7%;
 	padding-right: 2%;
 	padding-bottom: 3%;
@@ -848,12 +838,14 @@ p {
 @media (min-width: 1200px) {
 
 	.responsive-sb-text-third {
-		font-size: 30px;
+		font-size: 15px;
 	}	
 
 	.tariff-button-mobile {
 		display: none;
 	}
 
-}		
+}	
+
+
 
